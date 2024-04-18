@@ -1,0 +1,23 @@
+<p>customer-list works!</p>
+
+<table class='table'>
+
+    <thead>
+         <th>ID</th>
+         <th>Name</th>
+         <th>City</th>
+         <th>Address</th>
+         <th>Country</th>
+         <th>Select</th>
+    </thead>
+
+    <tr *ngFor="let cust of customers">
+        <td>{{cust.customerNo }}</td>
+        <td>{{cust.name }}</td>
+        <td>{{cust.city }}</td>
+        <td>{{ cust.address}}</td>
+        <td>{{ cust.country}}</td>
+        <td><button (click)="selectedCustomer = cust">Select</button></td>
+    </tr>
+
+</table>
